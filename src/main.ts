@@ -11,6 +11,11 @@ const createWindow = () => {
     },
   });
 
+  // デベロッパーツールを開く
+  if (process.env.NODE_ENV === 'development') {
+    mainWindow.webContents.openDevTools({ mode: 'detach' });
+  }
+
   // mainWindow.loadFile("dist/index.html");
   mainWindow.loadURL(
     url.format({
