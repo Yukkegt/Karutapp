@@ -18,27 +18,27 @@ export const CardField = (props: any) => {
     const { id, key } = props;
     
     return (
-<>
-        {sides.map((side) => (
-          <div key={side} className="flex gap-8 m-4">
-              {lrZones.map((lrZone) => (
-                  <div key={lrZone}>
-                      {rowZones.map((rowZone) => (
-                        <section className={`game-field mb-4`} key={key} id={`${side}-${lrZone}-${rowZone}`}>
-                            {(() => {
-                                const fields = [];
-                                for (let i = 0; i < 8; i++) {
-                                    fields.push(<DroppableCardZone />)
-                                }
-                                return <>{fields}</>;
-                            })()}
-                        </section>
-                        ))}
-                  </div>
-              ))}
-              {rowZones.reverse()}
-          </div>
-        ))}
+        <>
+            {sides.map((side) => (
+              <div key={side} className="flex gap-8 m-4">
+                  {lrZones.map((lrZone) => (
+                      <div key={lrZone}>
+                          {rowZones.map((rowZone) => (
+                            <section className={`game-field mb-4`} key={key} id={`${side}-${lrZone}-${rowZone}`}>
+                                {(() => {
+                                    const fields = [];
+                                    for (let i = 0; i < 8; i++) {
+                                        fields.push(<DroppableCardZone />)
+                                    }
+                                    return <>{fields}</>;
+                                })()}
+                            </section>
+                            ))}
+                      </div>
+                  ))}
+                  <div className='hidden'>{rowZones.reverse()}</div>
+              </div>
+            ))}
         </>
     );
   };
