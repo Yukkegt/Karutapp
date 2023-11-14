@@ -54,7 +54,7 @@ export const CardSelectionPage = () => {
 
     return (
         <DndProvider backend={HTML5Backend}>            
-            <div className="w-3/4">
+            <div className="w-3/4 justify-center mr-auto ml-auto">
                 <CardField />                
             </div>
             

@@ -20,7 +20,7 @@ export const CardField = (props: any) => {
     return (
         <>
             {sides.map((side) => (
-              <div key={side} className="flex gap-8 m-4">
+              <div key={side} className="flex gap-8 m-4 justify-center">
                   {lrZones.map((lrZone) => (
                       <div key={lrZone}>
                           {rowZones.map((rowZone) => (
