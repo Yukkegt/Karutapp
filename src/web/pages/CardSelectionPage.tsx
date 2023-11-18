@@ -58,10 +58,9 @@ export const CardSelectionPage = () => {
                 <CardField />                
             </div>
             
-            <div className="my-4">
-                <span></span>
+            <div className="my-4 flex gap-2 items-center">
                     <label htmlFor="search">検索</label>
-                    <input id="search"  className="uk-search-input" type="search" placeholder="" value="" />                    
+                    <input id="search"  className="px-4 py-1 border border-gray-100 rounded-md" type="search" placeholder="" value="" />                    
             </div>
 
             <div >            
