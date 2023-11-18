@@ -33,9 +33,12 @@ export const DroppableCardZone: FC = (props: any) => {
     drop(ref);
 
     const splitedText = droppedCardText?.match(/.{1,5}/g);
+    const baseClass = "[writing-mode:vertical-rl] w-12 h-16 text-xs border rounded ";
+    const emptyTextClass = " border-dotted bg-gray-50";
+    const filledTextClass = " border-solid border-green-100 cursor-move";
 
     return (
-        <div ref={ref} key={droppedCardText} data-handler-id={handlerId} className="[writing-mode:vertical-rl] border-dotted w-12 h-16 text-xs border bg-gray-50 rounded">
+        <div ref={ref} key={droppedCardText} data-handler-id={handlerId} className={baseClass + (droppedCardText ? filledTextClass : emptyTextClass)}>
             {/* If a card has been dropped, display its text */}
             {droppedCardText && 
               splitedText?.map(text => {
