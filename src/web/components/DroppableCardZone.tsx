@@ -32,14 +32,21 @@ export const DroppableCardZone: FC = (props: any) => {
     // Connect the drop function to the ref
     drop(ref);
 
+    const splitedText = droppedCardText?.match(/.{1,5}/g);
+
     return (
-        <div ref={ref} key={droppedCardText} data-handler-id={handlerId} className="border-dotted py-8 px-6 border bg-gray-50 rounded">
+        <div ref={ref} key={droppedCardText} data-handler-id={handlerId} className="[writing-mode:vertical-rl] border-dotted w-12 h-16 text-xs border bg-gray-50 rounded">
             {/* If a card has been dropped, display its text */}
-            {droppedCardText && (
-              <div>
-                {droppedCardText}
-              </div>
-            )}
+            {droppedCardText && 
+              splitedText?.map(text => {
+                return (
+                  <>
+                    {text}
+                    <br />
+                  </>
+                );
+              })
+            }
         </div>
     );
 };
