@@ -1,13 +1,4 @@
-import React, { FC, useRef } from 'react';
-import { useDrag, useDrop } from 'react-dnd';
-import type { Identifier, XYCoord } from 'dnd-core';
 import { DroppableCardZone } from './DroppableCardZone';
-
-interface DragItem {
-  index: number
-  id: string
-  type: string
-}
 
 const rowZones = ['下段', '中段', '上段'];
 const lrZones = ['左', '右']

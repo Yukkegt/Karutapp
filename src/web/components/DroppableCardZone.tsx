@@ -1,7 +1,5 @@
-import React, { FC, useRef, useState } from 'react';
-import { useDrag, useDrop } from 'react-dnd';
-import type { Identifier, XYCoord } from 'dnd-core';
-import { CardProps } from './Card';
+import { FC, useRef, useState } from 'react';
+import { useDrop } from 'react-dnd';
 
 interface DragItem {
   index: number;

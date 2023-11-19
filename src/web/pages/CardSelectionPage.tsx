@@ -2,9 +2,9 @@ import { Form } from "react-router-dom";
 import update from 'immutability-helper'
 import Card from "../components/Card";
 import CardData from "../data/cards.json";
-import { useCallback, useState } from 'react'
+import { useCallback, useState } from 'react';
 import { DndProvider } from "react-dnd";
-import { HTML5Backend } from 'react-dnd-html5-backend'
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import { CardField } from "../components/CardField";
 
 export interface Item {
@@ -15,8 +15,6 @@ export interface Item {
     LastPhrase:string
     LastPhraseKanaRow:string
 }
-
-
 
 export const CardSelectionPage = () => {
     const [cards, setCards] = useState(CardData);
@@ -53,11 +51,13 @@ export const CardSelectionPage = () => {
         new Map(CardData.map((card) => [card.LastPhraseKanaRow, card])).values());
 
     return (
-        <DndProvider backend={HTML5Backend}>            
+        <DndProvider backend={HTML5Backend}>                        
             <div className="w-3/4 justify-center mr-auto ml-auto">
                 <CardField />                
             </div>
             
+            <button type="submit" className="border p-2 rounded-lg bg-emerald-500 text-white hover:text-black hover:bg-white hover:border-emerald-500 transition-colors" >試合の記録を開始する</button>
+
             <div className="my-4 flex gap-2 items-center">
                     <label htmlFor="search">検索</label>
                     <input id="search"  className="px-4 py-1 border border-gray-100 rounded-md" type="search" placeholder="" value="" />                    
