@@ -13,7 +13,6 @@ export const App = () => {
   return (
     <HashRouter basename="/">
       <div className="font-sans">
-        <Header />
         <div className="flex h-max">
           <Sidebar />
           <main className="flex-1 space-y-4 p-4">    

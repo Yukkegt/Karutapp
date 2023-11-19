@@ -10,7 +10,7 @@ interface MenuItemProps {
 const MenuItem: React.FC<MenuItemProps> = ({ label, href }) => {
   return (
     <li className="mb-2" key={label}>
-      <Link to={href} className="hover:bg-gray-700 p-2 block rounded">
+      <Link to={href} className="hover:bg-gray-100 p-2 block rounded">
         {label}
       </Link>
     </li>
