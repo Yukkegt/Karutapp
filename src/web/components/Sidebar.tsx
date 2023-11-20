@@ -9,8 +9,9 @@ const Sidebar: React.FC = () => {
         <ul>
             <MenuItem label="ダッシュボード" href="/dashboard" />
             <MenuItem label="試合を開始" href="/cardSelection" />
-            <MenuItem label="分析" href="#" />
-            <MenuItem label="設定" href="#" />
+            <MenuItem label="試合の記録" href="/gameRecord" />
+            <MenuItem label="分析" href="/analysis" />
+            <MenuItem label="設定" href="/settings" />
         </ul>
       </nav>
     </aside>
