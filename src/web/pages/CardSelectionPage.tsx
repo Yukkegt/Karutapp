@@ -1,4 +1,4 @@
-import { Form } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
 import update from 'immutability-helper'
 import Card from "../components/Card";
 import CardData from "../data/cards.json";
@@ -55,8 +55,11 @@ export const CardSelectionPage = () => {
             <div className="w-3/4 justify-center mr-auto ml-auto">
                 <CardField />                
             </div>
-            
-            <button type="submit" className="border p-2 rounded-lg bg-emerald-500 text-white hover:text-black hover:bg-white hover:border-emerald-500 transition-colors" >試合の記録を開始する</button>
+            <Link 
+              to={"/gameRegistry"} 
+              type="button" 
+              className="border p-2 rounded-lg bg-emerald-500 text-white hover:text-black hover:bg-white hover:border-emerald-500 transition-colors"
+            >試合の記録を開始する</Link>            
 
             <div className="my-4 flex gap-2 items-center">
                     <label htmlFor="search">検索</label>

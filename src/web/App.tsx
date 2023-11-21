@@ -6,6 +6,7 @@ import { CardSelectionPage } from "./pages/CardSelectionPage";
 import AnalysisPage from "./pages/AnalysisPage";
 import GameRecordPage from "./pages/GameRecordPage";
 import SettingsPage from "./pages/SettingsPage";
+import GameRegistryPage from './pages/GameRegistryPage';
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
             <Routes>
                 <Route path="/dashboard" element={<DashboardPage />} />
                 <Route path="/cardSelection" element={<CardSelectionPage/> } />
+                <Route path="/gameRegistry" element={<GameRegistryPage/> } />
                 <Route path="/gameRecord" element={<GameRecordPage/> } />
                 <Route path="/analysis" element={<AnalysisPage/> } />
                 <Route path="/settings" element={<SettingsPage/> } />
